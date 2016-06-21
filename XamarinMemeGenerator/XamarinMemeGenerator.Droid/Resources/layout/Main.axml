@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <Spinner
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:id="@+id/spinnerMemes"
+      android:spinnerMode="dialog" />
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Text Top"
+      android:id="@+id/textTop" />
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Text Bottom"
+      android:id="@+id/textBottom" />
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text ="Generate Meme"
+      android:id="@+id/buttonGenerate" />
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="300dp"
+      android:id="@+id/imageMeme" />
+</LinearLayout>
