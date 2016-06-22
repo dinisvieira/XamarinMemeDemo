@@ -8,7 +8,27 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Button Content="Hello World, Click Me!" x:Name="Button" />
-    </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <ComboBox x:Name="MemesListView" 
+                  VerticalAlignment="Stretch" 
+                  HorizontalAlignment="Stretch" IsEnabled="False">
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+            <TextBox x:Name="TopTextBox" PlaceholderText="Top Text"></TextBox>
+            <TextBox x:Name="BottomTextBox" PlaceholderText="Bottom Text"></TextBox>
+            <Button x:Name="GenerateMyMeme" Tapped="GenerateMyMemeBtn_OnTapped">Generate My Meme</Button>
+        </StackPanel>
+        <Image x:Name="Image" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"></Image>
+    </Grid>
 </Page>
